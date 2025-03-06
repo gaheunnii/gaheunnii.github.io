@@ -9,16 +9,48 @@
 
 /* 顶部标题 */
 .header {
+  position: relative; /* 让子元素 absolute 参考 header */
   padding: 8px 30px;
 }
 
+/* 网站标题美化 */
 .site-title {
-  font-size: 14px; /* 原24px，减小四号 */
+  font-size: 20px; /* 适当增大一点，增强视觉吸引力 */
   font-weight: bold;
-  color: #333;
-  margin-bottom: 2px; /* 让名字和分割线更近 */
+  color: #2C2C2C; /* 比 #333 略深一点，提升对比度 */
+  margin-bottom: 3px; /* 适当增加间距，让排版更均衡 */
+  letter-spacing: 0.7px; /* 增加字间距，让文字更有呼吸感 */
+  position: relative; /* 让伪元素可以绝对定位 */
+  display: inline-block; /* 让下划线宽度跟随文字 */
 }
 
+/* 语言切换按钮 */
+.language-switcher {
+  font-size: 15px; /* 与标题相同 */
+  font-weight: bold;
+  color: #2C2C2C; /* 颜色统一 */
+  position: absolute;
+  top: 45px; /* 调整到和标题同一水平线 */
+  right: 30px; /* 保持右对齐 */
+  display: flex;
+  gap: 2px; /* 让按钮之间有间距 */
+}
+
+.language-switcher button {
+  background: none;
+  border: none;
+  color: #343333; /* 默认黑色 */
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.3s ease-in-out; /* 平滑过渡颜色 */
+}
+
+.language-switcher button:hover {
+  font-weight: bold; /* 悬停时变粗 */
+}
+
+/* 分割线 */
 .divider {
   height: 1px;
   background-color: #ccc;
@@ -35,41 +67,43 @@ body {
 .content {
   display: flex;
   gap: 30px;
+  align-items: flex-start; /* 左对齐 */
   margin-top: 15px;
 }
 
 /* 左侧个人信息 */
 .sidebar {
   width: 280px; /* 适当缩小侧边栏 */
-  padding: 20px;
+  min-height: 400px; /* 增加最小高度，让框变长 */
+  padding: 30px 20px; /* 增加内边距，使其更均衡 */
   background: #f3f2f2;
   text-align: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
 }
 
 .profile-img {
-  width: 110px; /* 头像缩小 */
-  height: 110px;
+  width: 150px; /* 头像缩小 */
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
 }
 
 .name {
-  font-size: 22px; /* 原28px，减小四号 */
+  font-size: 26px; /* 原28px，减小四号 */
   font-weight: bold;
   color: #333;
 }
 
 .school,
 .university {
-  font-size: 14px; /* 原16px，减小四号 */
+  font-size: 16px; /* 原16px，减小四号 */
   color: #666;
   margin: 3px 0;
 }
 
 .email {
-  font-size: 14px; /* 原16px，减小四号 */
+  font-size: 16px; /* 原16px，减小四号 */
   display: inline-block;
   margin-top: 8px;
   color: #007bff;
@@ -80,14 +114,53 @@ body {
 .main-content {
   width: 70%;
   padding: 15px;
+  font-size: 14px; /* 增大字体 */
+}
+
+
+/* Section 仅边框，无背景 */
+.project-section {
+  background: transparent; /* 无背景 */
+  border: 0.5px solid #e0e0e0; /* 非常浅的灰色 */
+  border-radius: 14px; /* 圆角 */
+  padding: 16px; /* 减少空白 */
+  margin-top: 20px; /* 增加与上方的间距 */
+  transition: border-color 0.3s ease, border-width 0.3s ease;
+}
+
+/* 鼠标悬停时，边框加深加粗 */
+.project-section:hover {
+  border-color: #b0b0b0; /* 稍微加深 */
+  border-width: 0.5px; /* 略微加粗 */
+}
+
+.about-section {
+  max-width: 700px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 40px; /* 适当增大间距 */
+}
+
+.projects-title {
+  font-size: 20px; /* 增大字体，使其更醒目 */
+  font-weight: bold; /* 加粗 */
+  color: #2C2C2C; /* 深色，增强对比度 */
+  text-transform: uppercase; /* 让文本全大写，更具专业感 */
+  letter-spacing: 1px; /* 增加字母间距，显得更有呼吸感 */
+  margin-top: 50px;  /* 让它和上方间距大一点 */
+  margin-bottom: 5px;
 }
 
 /* 项目分类标题 */
 .project-category {
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  font-style: italic;
 }
 
+/* 项目分类标题下划线 */
 .project-category h3 {
   font-size: 16px;
   font-weight: bold;
@@ -100,13 +173,14 @@ body {
 /* 项目网格 */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
 }
 
 /* 项目卡片 */
 .project-card {
   background: white;
+  max-width: 400px; /* 限制最大宽度 */
   padding: 12px;
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -118,7 +192,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* 标题悬停变色 */
+/* 项目标题悬停变色 */
 .project-title {
   text-decoration: none;
   color: #333;
@@ -127,4 +201,24 @@ body {
 
 .project-title:hover {
   color: #B38657; /* 标题悬停颜色 */
+}
+
+/* interest */
+.interests-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 列布局 */
+  gap: 10px 20px; /* 行间距 & 列间距 */
+  padding: 0;
+  list-style: none; /* 去掉默认列表符号 */
+  text-align: left; /* 左对齐文本 */
+}
+
+/* Interests 每个项目 */
+.interests-list li {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
 }
