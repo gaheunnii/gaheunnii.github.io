@@ -1,0 +1,130 @@
+/* 页面整体布局 */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Lora', serif; /* 让字体更优雅 */
+  font-size: 12px; /* 全局字体缩小 */
+}
+
+/* 顶部标题 */
+.header {
+  padding: 8px 30px;
+}
+
+.site-title {
+  font-size: 14px; /* 原24px，减小四号 */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2px; /* 让名字和分割线更近 */
+}
+
+.divider {
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 0px; /* 让它靠近上面的名字 */
+  margin-bottom: 8px;
+}
+
+body {
+  background-color: #F8F8F8; /* 冷调浅灰白 */
+  color: #1A1A1A; /* 文字颜色接近黑色 */
+}
+
+/* 主体内容区域 */
+.content {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+/* 左侧个人信息 */
+.sidebar {
+  width: 280px; /* 适当缩小侧边栏 */
+  padding: 20px;
+  background: #f3f2f2;
+  text-align: center;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.profile-img {
+  width: 110px; /* 头像缩小 */
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 22px; /* 原28px，减小四号 */
+  font-weight: bold;
+  color: #333;
+}
+
+.school,
+.university {
+  font-size: 14px; /* 原16px，减小四号 */
+  color: #666;
+  margin: 3px 0;
+}
+
+.email {
+  font-size: 14px; /* 原16px，减小四号 */
+  display: inline-block;
+  margin-top: 8px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* 右侧内容 */
+.main-content {
+  width: 70%;
+  padding: 15px;
+}
+
+/* 项目分类标题 */
+.project-category {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.project-category h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  border-bottom: 2px solid #B38657; /* 分类标题下划线 */
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+/* 项目网格 */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+/* 项目卡片 */
+.project-card {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* 悬停时轻微上移 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 标题悬停变色 */
+.project-title {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.project-title:hover {
+  color: #B38657; /* 标题悬停颜色 */
+}
