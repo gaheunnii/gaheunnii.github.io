@@ -4,7 +4,7 @@
   margin: auto;
   padding: 20px;
   font-family: 'Lora', serif; /* 让字体更优雅 */
-  font-size: 12px; /* 全局字体缩小 */
+  font-size: 14px; /* 全局字体缩小 */
 }
 
 /* 顶部标题 */
@@ -39,7 +39,7 @@
 .language-switcher button {
   background: none;
   border: none;
-  color: #343333; /* 默认黑色 */
+  color: #343333;
   font-size: 14px;
   cursor: pointer;
   margin-left: 10px;
@@ -52,15 +52,15 @@
 
 /* 分割线 */
 .divider {
-  height: 1px;
+  height: 0.5px;
   background-color: #ccc;
   margin-top: 0px; /* 让它靠近上面的名字 */
   margin-bottom: 8px;
 }
 
-body {
-  background-color: #F8F8F8; /* 冷调浅灰白 */
-  color: #1A1A1A; /* 文字颜色接近黑色 */
+/* Homepage background color */
+.home-container {
+  background-color: #f9f9f9; /* Main page background color */
 }
 
 /* 主体内容区域 */
@@ -76,7 +76,7 @@ body {
   width: 280px; /* 适当缩小侧边栏 */
   min-height: 400px; /* 增加最小高度，让框变长 */
   padding: 30px 20px; /* 增加内边距，使其更均衡 */
-  background: #f3f2f2;
+  background: #f5f5f5;
   text-align: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
 }
@@ -201,6 +201,126 @@ body {
 
 .project-title:hover {
   color: #B38657; /* 标题悬停颜色 */
+}
+
+/* 项目详情页面 */
+.project-details {
+  max-width: 800px; /* 限制最大宽度 */
+  margin: 0 auto; /* 居中 */
+  padding: 20px; /* 增加内边距，避免内容贴边 */
+  background-color: #fff;  /* 设置背景为白色 */
+}
+
+/* 项目详情页面标题 */
+.project-details h2 {
+  font-size: 45px; /* 增大标题字体 */
+  font-weight: bold;
+  text-align: center; /* 居中 */
+  color: #2C2C2C; /* 深色，增强对比度 */
+  margin-bottom: 20px; /* 增加与内容的间距 */
+}
+
+/* 项目详情页面内容 */
+.project-details p {
+  font-size: 16px; /* 正文字体适中 */
+  line-height: 1.5; /* 增加行间距 */
+  color: #444;
+}
+
+/*中韩关系实验分析部分图片组合*/
+.ea-image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.data-overview-ea-image {
+  width: 35%;
+  height: auto;
+}
+
+
+
+.project-details p,
+.project-details ul li,
+.project-details ol li,
+.project-details dd,
+.project-details dl dt {
+  line-height: 1.6; /* 调整为你希望的行高 */
+}
+
+/* code按钮样式 */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #2e2f2f;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+
+/* 项目详情页面abstract */
+#abstract-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+#abstract-container h2 {
+  text-align: center;
+  font-size: 2rem; /* 调整abstract字号 */
+  margin-bottom: 10px;
+}
+
+#abstract-container p {
+  text-align: justify;  /* 使段落文字两边对齐 */
+  margin: 0 6%;
+}
+
+/* 项目详情页面图片格式 */
+.project-details .data-overview-image {
+  display: block; /* 使图片成为块级元素，允许使用 margin */
+  margin: 20px auto; /* 自动左右外边距使图片水平居中，顶部和底部可以根据需要调整 */
+  width: 100%; /* 设置图片的最大宽度为100%（可根据需要调整） */
+  max-width: 700px; /* 可选，设置图片的最大宽度 */
+}
+
+.project-details .data-overview-pie-image {
+  display: block; /* 使图片成为块级元素，允许使用 margin */
+  margin: 20px auto; /* 自动左右外边距使图片水平居中，顶部和底部可以根据需要调整 */
+  width: 100%; /* 设置图片的最大宽度为100%（可根据需要调整） */
+  max-width: 500px; /* 可选，设置图片的最大宽度 */
+}
+
+.project-details .data-sample-image {
+  display: block; /* 使图片成为块级元素，允许使用 margin */
+  margin: 20px auto; /* 自动左右外边距使图片水平居中，顶部和底部可以根据需要调整 */
+  width: 100%; /* 设置图片的最大宽度为100%（可根据需要调整） */
+  max-width: 600px; /* 可选，设置图片的最大宽度 */
+}
+
+/* 项目内小标题 */
+.project-details .detail-section-title {
+  font-size: 26px; /* 调整为你需要的字号 */
+  font-weight: bold; /* 可选，增强标题的显眼程度 */
+  margin-top: 30px; /* 可选，调整上下的间距 */
+  text-align: left; /* 改为左对齐 */
+}
+
+/* 项目内小标题2 */
+.project-details .detail-section-title2 {
+  font-size: 20px; /* 调整为你需要的字号 */
+  margin-top: 30px; /* 可选，调整上下的间距 */
+  text-align: left; /* 改为左对齐 */
 }
 
 /* interest */
