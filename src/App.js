@@ -33,9 +33,9 @@ const projects = [
   },
   {
     id: 5,
-    title: "购物平台设计",
+    title: "Logic Square - 共享购物平台设计",
     description: "打造直观的电商界面，优化用户购物体验。",
-    link: "/project4",
+    link: "/LogicSquareShoppingPlatform",
     category: "Product & UI/UX",
   },
 ];
@@ -143,16 +143,6 @@ function Home() {
         </main>
         </div> 
       </div>  {/* Close container div */}
-    </div>
-  );
-}
-
-function ProjectDetails({ title, content }) {
-  return (
-    <div className="project-details"> {/* This stays as it is */}
-      <h2>{title}</h2>
-      <p>{content}</p>
-      <Link to="/" className="btn">返回主页</Link>
     </div>
   );
 }
@@ -790,7 +780,172 @@ function SocialPlatformDesign() {
   );
 }
 
+function LogicSquareShoppingPlatform() {
+  return (
+    <div className="project-details">
+      {/* 标题 */}
 
+      <h2>Logic Square - 共享购物平台设计</h2>
+    <div id="abstract">
+      </div>
+
+      {/* 代码下载按钮 */}
+      <div className="code-container">
+        <a href="/SKKouple_SRS_Report.pdf" download className="code-link">Report
+        </a>
+      </div>
+      
+      {/* 概述 */}
+      <section>
+        <h2 className="detail-section-title">1. 概述</h2>
+        <p>
+          <strong>产品名称</strong>: logic square - 共享购物平台（Shopping Sharing Platform）<br/>
+          <strong>目标用户</strong>: 韩国20~35岁年轻消费者、网购达人、社交媒体活跃用户<br/>
+          <strong>产品愿景</strong>: 通过共享和推荐机制，让用户获得更低的购物成本，同时增强社交互动，提高购物乐趣。
+        </p>
+
+        <h2 className="detail-section-title2">1.1 背景介绍</h2>
+        <p>
+          当前电商市场竞争激烈，传统积分返利模式已不能有效吸引用户。消费者更倾向于即时折扣或可直接提现的现金奖励。本项目基于共享型购物理念，结合社交推荐与现金返利机制，旨在提供创新的购物体验，提升用户粘性和复购率。
+        </p>
+
+        <h2 className="detail-section-title2">1.2 目标</h2>
+        <ul>
+          <li>提供一个结合<strong>社交推荐、返利、共享经济</strong>的购物平台。</li>
+          <li>通过<strong>推荐返利、共享购物、实时折扣</strong>等方式提升用户购买意愿。</li>
+          <li>解决用户对传统积分兑换门槛高、使用受限的问题。</li>
+        </ul>
+        </section>
+
+
+      {/* 用户调研 */}
+      <section>
+        <h2 className="detail-section-title">2. 事前用户调研</h2>
+        <h3>2.1. 调研背景</h3>
+        <p>
+          本次用户调研旨在了解目标用户对购物返利、社交推荐、共享购物等电商模式的接受度和使用习惯，并分析市场趋势，以优化平台的产品设计和营销策略。
+        </p>
+
+        <h3>2.2 主要发现</h3>
+        <h3>2.2.1 购物偏好</h3>
+        <ul>
+          <li>用户更倾向于<strong>直接折扣</strong>，而非后续使用的“积分”或“虚拟货币”形式的奖励。</li>
+          <li><strong>价格敏感度高</strong>，首购优惠是吸引用户的重要因素。</li>
+          <li>购物时，用户更关注<strong>商品价格、运费、配送速度</strong>，对<strong>品牌忠诚度较低</strong>。</li>
+        </ul>
+
+        <h3>2.2.2 购物返现 vs. 积分奖励</h3>
+        <ul>
+          <li><strong>积分模式失效</strong>：用户不愿积累积分再消费，而是偏好直接折扣或可提现的现金返现。</li>
+          <li><strong>案例分析</strong>：
+            <ul>
+              <li><strong>Temu</strong>：通过邀请返现吸引大量年轻用户，但“中国产品信任度”仍然是痛点。</li>
+              <li><strong>ShopBack</strong>：提供直接<strong>现金返现</strong>，用户信任度高，复购率高达60%。</li>
+            </ul>
+          </li>
+          <li><strong>结论</strong>：购物返现比积分更有吸引力，特别是对于经济敏感型用户。</li>
+        </ul>
+
+        <h3>2.2.3 影响用户购买决策的因素</h3>
+        <img src="影响用户购买决策因素.png" alt="DecisionFactors" className="data-large-image" />
+        <h3>2.2.4 共享购物和社交推荐</h3>
+        <ul>
+          <li><strong>社交裂变模式可行</strong>：用户愿意分享优惠链接，特别是<strong>折扣力度随人数增加</strong>的模式。</li>
+          <li><strong>挑战</strong>：
+            <ul>
+              <li>需解决“社交疲劳”问题，避免用户因过多邀请而流失。</li>
+              <li>需要明确“共享购物”带来的实际优惠，增强吸引力。</li>
+            </ul>
+          </li>
+        </ul>
+        </section>
+
+      {/* 3.竞品分析 */}
+        <h2 className="detail-section-title2">3. 竞品分析</h2>
+        <h3>3.1 主要竞品</h3>
+        <ul>
+          <li><strong>Temu</strong>：低价+补贴策略，鼓励社交分享和推荐，提供巨额积分吸引用户。</li>
+          <li><strong>ShopBack（샵백）</strong>：主打现金返还，用户通过该平台进入电商网站消费后获得部分现金返还。</li>
+          <li><strong>쿠팡（Coupang）</strong>：依靠强大的物流和会员体系（로켓배송），提升用户复购率。</li>
+        </ul>
+
+        <h3>3.2 竞品优劣势分析</h3>
+        <img src="Competitive product analysis.png" alt="竞品优劣势分析" className="data-huge-image" />
+
+        <h3>3.3 Logic Square的差异化优势</h3>
+        <ul>
+          <li><strong>即时返现</strong>：用户可以直接将购物返利兑换为现金，无需额外消费积累。</li>
+          <li><strong>社交裂变模式</strong>：鼓励用户分享购物链接，好友下单可获得双向返利，提升平台传播度。</li>
+          <li><strong>共享购物</strong>：允许用户联合购买，享受更大折扣，提高社交购物的参与感。</li>
+        </ul>
+
+         {/* 目标用户 */}
+         <h2 className="detail-section-title2">4.目标用户</h2>
+        <h3>4.1 用户画像</h3>
+        <h3>(1) 普通消费者A </h3>
+        <ul>
+          <li>主要需求：低价、高性价比购物，喜欢折扣、返现模式</li>
+          <li>购物习惯：频繁使用比价工具，易受推荐影响</li>
+        </ul>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "10px" }}>
+        <img src="customer2.png" alt="Target Users" style={{ width: "40%", height: "auto" }} />
+        <img src="customer1.png" alt="Target Users" style={{ width: "40%", height: "auto" }} />
+        </div>
+
+        <h3>(2) 社交电商推广者B </h3>
+        <ul>
+          <li>主要需求：利用平台盈利，通过分享获取返利</li>
+          <li>购物习惯：关注促销信息，擅长社交平台推广</li>
+        </ul>
+
+         {/* 功能需求 */} 
+         <section>       
+        <h2 className="detail-section-title2">5. 功能需求</h2>
+        <p>平台提供完整的电商购物体验，包括用户端和商家端的功能，结合共享购物、返利体系和社交推广，以提升用户参与度和商家销售额。</p>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <img src="function1.jpeg" alt="Target Users" style={{ width: "80%", height: "auto" }} />
+          <img src="function2.jpeg" alt="Target Users" style={{ width: "81%", height: "auto" , marginLeft: "-0.1%" }} />
+        </div>
+        </section>
+
+          {/* 用户体验 */}
+        <h2 className="detail-section-title2">5.用户体验(UX)</h2>
+        <h3>5.1 用户旅程（User Journey）</h3>
+          <ol>
+          <li>发现平台 → 领取新用户优惠 → 浏览商品</li>
+          <li>比价后决定购买 → 选择共享购买或直接购买</li>
+          <li>付款 → 获得返利 → 提现或再次消费</li>
+          <li>分享购物体验 → 邀请好友加入 → 持续享受优惠</li>
+        </ol> 
+
+          <img src="user journey.png" alt="User Journey" className="data-overview-image" />
+
+          {/* 用户体验 */}
+        <h3>5.2  交互与UI/UX设计</h3>
+          <ul>
+          <li>简洁直观的购物流程：减少不必要的点击，提升购买效率</li>
+          <li>颜色搭配：绿色为主，清新风格，搭配趣味UI</li>
+          <li>动画反馈：检索，查阅，点击等关键节点提供动态反馈</li>
+          </ul>
+       {/* 主页面介绍 */}
+        <h3>5.2.1 主页面</h3>
+        <p>
+          左侧提供 <strong>商品分类导航</strong>，方便用户快速找到想要的商品，右侧则展示精选商品和推荐内容。   <br />
+          通过 <strong>减少层级跳转</strong>，优化用户的购买路径，让购物体验更加流畅。
+        </p>
+      {/* 主页面图片 */}
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "10px" }}>
+          <img src="homepage-mobile.png" alt="移动端主页面" className="data-huge-image" style={{ width: "34%" }} />
+          <img src="homepage-desktop.png" alt="桌面端主页面" className="data-huge-image" style={{ width: "56%" }} />
+        </div>
+
+
+
+
+
+        </div>
+  );
+}
 
 export default function App() {
   return (
@@ -800,10 +955,10 @@ export default function App() {
         <Route path="/KoreaChinaRelations" element={<KoreaChinaRelations />} />
         <Route path="/BeerRecommendation" element={<BeerRecommendation />} />
         <Route path="/SocialPlatformDesign" element={<SocialPlatformDesign/>} />
-        <Route path="/project4" element={<ProjectDetails title="购物平台设计" content="介绍电商界面的优化和交互设计方案。" />} />
+        <Route path="/LogicSquareShoppingPlatform" element={<LogicSquareShoppingPlatform/>} />
         <Route path="/ConsumerSentimentAnalysis" element={<ConsumerSentimentAnalysis />} />
       </Routes>
     </Router>
-  );
-}
 
+);
+}
