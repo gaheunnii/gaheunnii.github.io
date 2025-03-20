@@ -234,21 +234,28 @@
 }
 
 .code-link {
-  font-size: 14px; /* 调整字体大小 */
-  font-weight: bold; /* 让字体加粗 */
-  color: #fff; /* 文字颜色 */
-  background-color: #2e2f2f; /* 按钮背景颜色 */
-  border: 2px solid #2e2f2f; /* 按钮边框 */
-  padding: 6px 12px; /* 调整按钮大小 */
-  border-radius: 5px; /* 圆角按钮 */
-  cursor: pointer; /* 鼠标悬停变手形 */
-  display: flex; /* 让文本在按钮内居中 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  width: fit-content; /* 让按钮宽度适应内容 */
-  margin: 0 auto; /* 让按钮在页面中居中 */
-  text-decoration: none; /* 去掉默认下划线 */
+  display: inline-flex; /* 让按钮保持 inline 状态，避免 block 占满整行 */
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2e2f2f;
+  border: 2px solid #2e2f2f;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: auto; /* 避免按钮固定宽度 */
+  text-decoration: none;
   transition: all 0.3s ease-in-out;
+}
+
+/* 让按钮并排显示 */
+.code-container {
+  display: flex; /* 让子元素并排 */
+  gap: 30px; /* 按钮间距 */
+  justify-content: center; /* 让它们水平居中 */
+  margin-top: 10px;
 }
 
 .btn {

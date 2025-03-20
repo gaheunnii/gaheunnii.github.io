@@ -322,11 +322,14 @@ function KoreaChinaRelations() {
       <h2>Topic Modeling-Based Analysis of Korea-China Relations Issues</h2>
     <div id="abstract">
 
-      {/* 代码下载按钮 */}
-      <div className="code-container">
-        <a href="/Topic Modeling-Based Analysis of Korea-China Relations Issues.pdf" download className="code-link">Report
-        </a>
-      </div>
+    <div className="code-container">
+      <a href="/Topic Modeling-Based Analysis of Korea-China Relations Issues.pdf" download className="code-link">
+        Report
+      </a>
+      <a href="/KoreaChinaRelations.zip" download className="code-link">
+        Code
+      </a>
+    </div>
 
       {/* Abstract 部分 */}
       <div id="abstract-container">
@@ -789,12 +792,12 @@ function LogicSquareShoppingPlatform() {
     <div id="abstract">
       </div>
 
-      {/* 代码下载按钮 */}
+      {/* 代码下载按钮 
       <div className="code-container">
         <a href="/SKKouple_SRS_Report.pdf" download className="code-link">Report
         </a>
       </div>
-      
+      */}
       {/* 概述 */}
       <section>
         <h2 className="detail-section-title">1. 概述</h2>
@@ -939,6 +942,99 @@ function LogicSquareShoppingPlatform() {
           <img src="homepage-desktop.png" alt="桌面端主页面" className="data-huge-image" style={{ width: "56%" }} />
         </div>
 
+        {/* 5.2.2 Link Share 社交分享机制 */}
+        <h2 className="detail-section-title2">5.2.2 Link Share 社交分享</h2>
+        <p>
+          为了提升用户的社交互动和裂变传播，我们设计了 <strong>“Link Share”</strong> 机制，用户可以通过社交平台分享商品链接，邀请好友一起享受购物优惠。
+        </p>
+        <ul>
+          <li><strong>一键分享</strong>：支持分享到 <strong>WhatsApp、KakaoTalk、微信、Instagram、Twitter</strong> 等社交平台。</li>
+          <li><strong>好友拼单</strong>：用户可以邀请好友加入拼单，享受更大折扣。</li>
+          <li><strong>专属邀请奖励</strong>：成功邀请好友注册并购物，用户可获得 <strong>现金返现或额外折扣</strong>。</li>
+          <li><strong>动态折扣</strong>：随着分享人数的增加，折扣力度同步提升，激励更多用户参与。</li>
+        </ul>
+
+        <h3> 交互流程</h3>
+        <ol>
+          <li>用户在商品详情页点击 <strong>“分享”</strong> 按钮。</li>
+          <li>选择社交平台，生成 <strong>专属分享链接</strong>，并发送给好友。</li>
+          <li>好友通过链接访问商品页面，并选择加入拼单或直接购买。</li>
+          <li>若拼单成功，所有参与用户享受折扣，分享者获得额外返现。</li>
+        </ol>
+
+        <h3>5.2.2 链接分享</h3>
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "10px" }}>
+          <img src="link share.png" alt="Link Share 分享流程" className="data-medium-image" style={{ width: "30%" }} />
+          <img src="商品.png" alt="社交拼单示意图" className="data-overview-image" style={{ width: "66%" }} />
+        </div>
+
+        {/* 6. 技术架构 */}
+        <section>
+        <h2 className="detail-section-title">6. 技术架构</h2>
+        <h3>6.1 前端技术</h3>
+        <ul>
+          <li><strong>框架</strong>：React.js / Vue.js</li>
+          <li><strong>状态管理</strong>：Redux / Vuex</li>
+          <li><strong>支付集成</strong>：Kakao Pay、Naver Pay API</li>
+        </ul>
+        <h3>6.2 后端技术</h3>
+        <ul>
+          <li><strong>框架</strong>：Node.js（Express）/ Django（Python）</li>
+          <li><strong>数据库</strong>：PostgreSQL / MongoDB</li>
+          <li><strong>缓存优化</strong>：Redis</li>
+          <li><strong>存储</strong>：AWS S3</li>
+        </ul>
+      </section>
+
+      {/* 7. 业务模式与盈利点 */}
+      <section>
+        <h2 className="detail-section-title">7. 业务模式与盈利点</h2>
+        <h3>7.1 盈利模式</h3>
+        <ul>
+          <li><strong>商家佣金</strong>：从商家销售额抽取一定比例佣金（如2-5%）。</li>
+          <li><strong>广告投放</strong>：商家付费推广，提高曝光率。</li>
+          <li><strong>VIP 会员</strong>：用户付费开通VIP，享受更高返现比例和专属折扣。</li>
+        </ul>
+        <h3>7.2 成本结构</h3>
+        <ul>
+          <li>服务器与技术开发维护</li>
+          <li>营销推广（如新用户补贴、广告投放）</li>
+          <li>运营人员成本</li>
+        </ul>
+      </section>
+
+      {/* 8. 未来迭代计划 */}
+      <section>
+        <h2 className="detail-section-title">8. 未来迭代计划</h2>
+        <h3>8.1 初版本</h3>
+        <ul>
+          <li>商品展示与搜索</li>
+          <li>购物与支付功能</li>
+          <li>返利提现功能</li>
+          <li>分享推荐功能</li>
+        </ul>
+        <h3>8.2 第二阶段</h3>
+        <ul>
+          <li>AI 个性化推荐</li>
+          <li>社交互动功能（用户评论、点赞）</li>
+          <li>多样化奖励机制（增加更多游戏化互动）</li>
+        </ul>
+        <h3>8.3 长期规划</h3>
+        <ul>
+          <li>国际化支持</li>
+          <li>AI 智能客服</li>
+          <li>线下合作渠道（本地商店折扣）</li>
+        </ul>
+      </section>
+
+      {/* 9. 结论 */}
+      <section>
+        <h2 className="detail-section-title">9. 结论</h2>
+        <p>
+          本产品结合了购物返现、社交分享、商家入驻等多种模式，目标是打造一个兼具优惠与社交属性的电商平台。
+          通过优化用户体验和商家服务，提高用户留存率和订单转化率，形成良性循环。
+        </p>
+      </section>
 
 
 
